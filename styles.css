@@ -44,7 +44,7 @@ header.site {
 }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 2px; font-size: 14px; }
-.brand .mark { width: 22px; height: 22px; }
+.brand .mark { width: 26px; height: 26px; }
 .brand small { color: var(--muted); font-weight: 500; letter-spacing: 1px; }
 .nav-links { display: flex; gap: 22px; font-size: 14px; }
 .nav-links a { color: var(--muted); }
@@ -59,28 +59,16 @@ header.site {
 .hero .sub { color: var(--accent); letter-spacing: 8px; font-size: clamp(12px, 2.4vw, 16px); font-weight: 600; margin-bottom: 26px; }
 .hero p.lede { color: var(--muted); max-width: 620px; margin: 0 auto 30px; font-size: 18px; }
 
-/* The black hole */
-.singularity { position: relative; width: 240px; height: 240px; margin: 8px auto 40px; }
-.singularity .disk {
-  position: absolute; inset: 0; border-radius: 50%;
-  background: conic-gradient(from 0deg, var(--gold), var(--orange), var(--accent), var(--teal), var(--accent), var(--orange), var(--gold));
-  filter: blur(1px) brightness(1.08);
-  -webkit-mask: radial-gradient(circle, transparent 39%, #000 43%, #000 70%, transparent 75%);
-  mask: radial-gradient(circle, transparent 39%, #000 43%, #000 70%, transparent 75%);
-  animation: spin 20s linear infinite;
-  opacity: 0.92;
+/* The black hole — matches the app icon: a squashed orange accretion disk and a
+   bright purple event-horizon ring around a black core (Gargantua-style). */
+.hero .bh {
+  display: block; width: 240px; height: 240px; margin: 8px auto 40px;
+  animation: bhGlow 6s ease-in-out infinite;
 }
-.singularity .core {
-  position: absolute; inset: 30%; border-radius: 50%; background: #02030a;
-  box-shadow: 0 0 70px 12px rgba(187, 85, 255, 0.45), inset 0 0 26px rgba(0, 0, 0, 0.95);
+@keyframes bhGlow {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(187, 85, 255, 0.35)); }
+  50%      { filter: drop-shadow(0 0 24px rgba(187, 85, 255, 0.60)); }
 }
-.singularity .worldline { position: absolute; inset: 0; animation: spin 9s linear infinite reverse; }
-.singularity .worldline::before {
-  content: ""; position: absolute; top: 4%; left: 50%; width: 11px; height: 11px;
-  border-radius: 50%; background: var(--gold); transform: translateX(-50%);
-  box-shadow: 0 0 14px 4px rgba(255, 204, 51, 0.85);
-}
-@keyframes spin { to { transform: rotate(360deg); } }
 
 /* ---- Store badges ---- */
 .badges { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
@@ -153,6 +141,6 @@ footer.site { border-top: 1px solid var(--panel-border); padding: 30px 0 44px; m
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .singularity .disk, .singularity .worldline { animation: none; }
+  .hero .bh { animation: none; }
   html { scroll-behavior: auto; }
 }
