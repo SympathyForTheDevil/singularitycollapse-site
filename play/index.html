@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+  /play — the landing page shared by the in-app "Beat my time" Daily challenge.
+  Store badges link to the real (stable) store URLs, so they go live automatically
+  the moment each app publishes — no edit needed at launch. (Pre-launch the links
+  resolve to a not-yet-available store page; that's expected.)
+  A2 (post-launch) will add Universal/App Links so this URL opens the installed app
+  straight to today's Daily, with this page as the fallback for non-installers.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play today's region — Singularity: Collapse</title>
+  <meta name="description" content="Someone challenged you to today's region. Trace one worldline, consume every object in ascending mass, fill every cell, and collapse it. Free on iOS and Android.">
+  <meta name="theme-color" content="#05060c">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Singularity: Collapse — today's region">
+  <meta property="og:description" content="Someone challenged you to today's region. One line, every star, the black hole last — beat their time.">
+  <meta property="og:url" content="https://singularitycollapse.com/play">
+</head>
+<body>
+  <header class="site">
+    <div class="container nav">
+      <a class="brand" href="/" style="color:inherit">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <g transform="translate(32,32) scale(1,0.30)">
+            <circle r="23" fill="none" stroke="#ffb03c" stroke-opacity="0.45" stroke-width="2.4"/>
+            <circle r="18" fill="none" stroke="#ff7a18" stroke-width="4.5"/>
+          </g>
+          <circle cx="32" cy="32" r="14" fill="#000"/>
+          <circle cx="32" cy="32" r="14" fill="none" stroke="#c060ff" stroke-width="3"/>
+          <circle cx="32" cy="32" r="14" fill="none" stroke="#e6c0ff" stroke-width="1.1"/>
+        </svg>
+        SINGULARITY <small>COLLAPSE</small>
+      </a>
+      <nav class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/support">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <svg class="bh" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <radialGradient id="bh-halo" cx="50%" cy="50%" r="50%">
+            <stop offset="42%" stop-color="#bb55ff" stop-opacity="0"/>
+            <stop offset="60%" stop-color="#be5aff" stop-opacity="0.5"/>
+            <stop offset="80%" stop-color="#963ce6" stop-opacity="0.22"/>
+            <stop offset="100%" stop-color="#7828c8" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="94" fill="url(#bh-halo)"/>
+        <g transform="translate(100,100) scale(1,0.30)">
+          <circle r="72" fill="none" stroke="#ffb03c" stroke-opacity="0.40" stroke-width="5"/>
+          <circle r="58" fill="none" stroke="#ff7a18" stroke-width="11"/>
+        </g>
+        <circle cx="100" cy="100" r="46" fill="#000"/>
+        <circle cx="100" cy="100" r="46" fill="none" stroke="#c060ff" stroke-width="6"/>
+        <circle cx="100" cy="100" r="46" fill="none" stroke="#e6c0ff" stroke-width="2.4"/>
+      </svg>
+      <h1>TODAY'S REGION</h1>
+      <div class="sub">SINGULARITY · COLLAPSE</div>
+      <p class="lede">You've been challenged. Everyone plays the same region today — trace one unbroken worldline, consume every object in ascending mass, fill every cell, and finish on the black hole. <b>Beat their time.</b></p>
+      <div class="badges">
+        <a class="badge" href="https://apps.apple.com/app/id6779779848"><b>App Store</b> <span class="soon">Get it free</span></a>
+        <a class="badge" href="https://play.google.com/store/apps/details?id=com.sympathyforthedevil.singularity_collapse"><b>Google Play</b> <span class="soon">Get it free</span></a>
+      </div>
+      <p class="lede" style="margin-top:1.4rem"><a href="/#features">How it works →</a></p>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="container foot">
+      <span>© 2026 Adam Ettinger · Singularity: Collapse</span>
+      <span class="foot-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/support">Support</a>
+        <a href="mailto:support@singularitycollapse.com">Contact</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
